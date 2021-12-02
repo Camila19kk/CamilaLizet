@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Poppins:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Rajdhani: wght @ 600 & display = swap');
+@import url('fontawesome-free-6.0.0-beta2-web/css/all.min.css');
+/* Así se incorpora una fuente Google */
+
+:root{
+    --color1:#FFB92B;
+    --color2: #43A3A2;
+    --color3: #FEF6EB;
+    --color4: #FB8201;
+    --color5: #F2BDBD;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
+    --color-gris-claro: #dddddd;
+    --color-gris-oscuro: #444444;
+    --sombra-principal: 0 5px 10px rgb(0 0 0 / 40%);
+}
+html{
+    scroll-behavior: smooth;
+    /* Al desplazarse en la página con lo hipervínculos se haga con animación */
+}
+
+body{/* Así se define una regla para una etiqueta (body) */
+    background-color: var(--color-gris-claro);/* Color de fondo */
+    font-family: Poppins, Tahoma, Arial, sans-serif;
+    margin:0; /* Para anular el margen por defecto de body */
+    font-size: 15px;
+    color: var(--color-gris-oscuro);
+}
+a{/* Hipervínculos */
+    color:var(--color2);
+    text-decoration: none;/* Para que no se muestren subrayados */
+}
+a:hover{
+    color:var(--color1);
+    text-decoration: underline;
+}
+body{ /* Así se define una regla para una etiqueta (body) */
+    background-color:var(--color-blanco); /* Color de fondo */
+    color: var(--color1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--color4);
+}
+img{
+    display: block; /*Elimina el espacio por defecto que tienen las imagenes por defecto*/
+}
+p{
+    margin-top: 0px; /*Margen superior */
+    margin-bottom: 20px; /*Margen inferior */
+    line-height: 22px;
+}
+h1{
+    font-weight: 1000px;/*Estilo de la fuente o grosor */
+    font-size: 50px;/*Tamaño de la fuente*/
+    letter-spacing: -2px; /*Espacio entre letras*/
+    margin-top: 0px; /*Margen superior */
+    margin-bottom: 0px;
+}
+h2{
+    font-weight: 700; /*Estilo de la fuente o grosor */
+    font-size: 40px; /*Tamaño de la fuente*/
+    letter-spacing: -2px;
+    text-transform: uppercase; /*Para que se muestre los textos en mayuscula*/
+    line-height: 50px; /*Alto de la linea, interlineado */
+    margin-top: 0px; /*Margen superior */
+    margin-bottom: 0px;  /*Margen inferior */
+}
+h3{
+    font-weight: 700; /*Estilo de la fuente o grosor */
+    font-size: 20px; /*Tamaño de la fuente*/
+    text-transform: uppercase; /*Para que se muestre los textos en mayuscula */
+    line-height: 20px; /*Alto de la linea, interlineado */
+    margin-top: 0px; /*Margen superior */
+    margin-bottom: 0px;  /*Margen inferior */
+}
+#top-nav{
+    background-color: var(--color-negro);
+}
+#bar{
+   background-color: var(--color-blanco /70%);
+    position: sticky; /* Para que el objeto se quede pegado en la posición especificada en top */
+    top: 0; /* Es la distancia al borde superior de la ventana */
+    color: var(--color4);
+    margin-bottom: 0px;
+
+}
+#bar .row{
+    justify-content: space-between;
+    
+}
+#bienvenida{
+    background-image: url('../images/3393.jpg');
+   color: var(--color-negro);
+   padding-top: 50px;
+   padding-bottom: 50px;
+}
+#bienvenida img:hover{
+    transform: rotate(-100deg);
+}
+
+#ofertas{
+    background-color: var(--color-blanco);
+    color:var(--color-negro);
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#ofertas p{
+    margin-top: 30px; /*Margen superior */
+    margin-bottom: 30px;  /*Margen inferior */
+    font-size: 40px;
+}
+#ofertas .col{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    margin: 5px;
+    border: solid 1px var(--color-gris-oscuro);
+    padding-top: 15px;
+    border: solid 1px #dddddd;
+    border-radius: 0 0 15px 15px;
+    transition: .5s all ease-in-out;
+}
+#ofertas .col:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    margin-top: -3px;
+}
+#fines{
+    background-color: var(--color-blanco);
+    color:var(--color-negro);
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#fines p{
+    margin-top: 30px; /*Margen superior */
+    margin-bottom: 30px;  /*Margen inferior */
+    font-size: 30px;
+}
+#fines .col{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    margin: 5px;
+    border: solid 1px var(--color-gris-oscuro);
+    padding-top: 25px;
+    text-align: center;
+    transition: .5s all ease-in-out;
+    overflow: hidden; /* Lo que se desborda se oculta */
+}
+#fines img{
+    transition: .5s ease-in-out all;
+}
+#fines img:hover{
+    transform: scale(1.5,1.5) translateY(10px);/* ancho y alto porcentual */
+}
+#tragos{
+    background-image: url('../images/trago1.jpg');
+    background-size: cover;/*Para que la imagen de fondo sea reponsive*/
+     background-position: 0% 30%; /*Para posicion X y Y (Horizontal y vertical)*/
+     background-attachment: fixed; /*Imagen fija con respecto al navegador*/
+     color: var(--color-negro);
+}
+#tragos .col{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    margin: 5px;
+    border: solid 1px var(--color4);
+    padding-top: 25px;
+    text-align: center;
+}
+#pizza{
+    background-image: url('../images/carta1.jpeg');
+    background-size: cover;/*Para que la imagen de fondo sea reponsive*/
+     background-position: 0% 30%; /*Para posicion X y Y (Horizontal y vertical)*/
+     background-attachment: fixed; /*Imagen fija con respecto al navegador*/
+     color: var(--color-negro);
+     text-align: left;
+  
+}
+#pizza p{
+    margin-right: 20%;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 200;
+    letter-spacing: -2px;
+    margin-left: 5%;  
+}
+#recomendaciones {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#recomendaciones img{
+    border-radius: 30%;
+}
+#recomendaciones p{
+    margin-top: 30px; /*Margen superior */
+    margin-bottom: 30px;  /*Margen inferior */
+}
+#recomendaciones .col{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    margin: 5px;
+    border: solid 1px var(--color4);
+    padding-top: 25px;
+    text-align: center;
+    transition: .5s all ease-in-out;
+}
+#recomendaciones .col:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    margin-top: -3px;
+}
+#delivery {
+    background-color: var(--color-gris-claro);
+    var(--color-negro);
+}
+#delivery p{
+    font-size: 30px; 
+    margin-top: 20%; /*Margen superior */
+    line-height: 50px;
+}
+#tarde {
+    text-align: center;
+    color: var(--color-gris-oscuro);
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#chef{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(210,111,10,1) 100%);
+    color: #000000;
+    text-align: center;
+}
+#chef img{
+     border-radius: 50%;
+    border: solid 10px rgba(0,0,0,0.2);
+    filter: grayscale(1);
+    transition: .5s all ease-in-out;
+}
+#chef img:hover{
+    filter: grayscale(0);
+    transform: rotate(-15deg);
+}
+#main-footer{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-gris-claro);
+    padding-top: 45px; /*Margen superior */
+    padding-bottom: 45px;  /*Margen inferior */
+}
+#main-content{
+    min-height: 200px; /* Alto mínimo */
+}
+#logo{
+    width: 100px;
+}
+#page-header{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+#ir-arriba{
+    font-size: 24px;
+    background-color: var(--color4);
+    color: var(--color-negro);
+    padding: 15px 22px;
+    position: fixed; /* Posición fija con respecto a la ventana del navegador */
+    right: 20px; /* Distancia al borde derecho de la ventana */
+    bottom: 60px; /* Distancia al borde inferior de la ventana */
+    border-radius: 50%;
+}
+#fondo{
+    background-color: var(--color-blanco);
+    text-align: center;
+    color: var(--color-blanco);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#noticias {
+    background-color: var(--color-gris-claro);
+    color: var(--color-blanco);
+    text-align: center;
+}
+#noticias p{
+    margin-left: 30px; /*Margen superior */
+    margin-right: 30px;  /*Margen inferior */
+}
+#hola {
+    background-color: var(--color-gris-claro);
+    color: var(--color-negro);
+    text-align: center;
+}
+#hola p{
+    margin-left: 30px; /*Margen superior */
+    margin-right: 30px;  /*Margen inferior */
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+#videos{
+    text-align: center;
+}
+#sede{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    padding: 30px;
+    box-shadow: var(--sombra-principal);
+}
+.texto-importante{
+    font-weight: 900;
+    color:var(--color1);
+}
+.separador-titulo {
+    position: fixed;
+    display: inline-block;
+    margin-bottom: 35px;  /*Margen inferior */
+}
+.tra{
+    font-size: 30px;
+    margin-left: 40px;
+}
+.padded{
+    padding-top: 30px;
+    padding-bottom: 30px;  /*Margen inferior */
+}
+.container{
+    max-width: 1440px; /*ancho maximo*/
+
+    margin-left: auto;
+    margin-right: auto;
+    /*Al ser ambos margenes auto, son iguales y se ve centrado la caja*/
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row{
+    display: flex;
+    /* por defecto ubica los objetos que contiene directamente uno al costado del otro */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.col{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-basis: 0;  /* Para que inicien con un acnho minimo */
+    flex-grow: 1; /*Para que crezcan en forma profesional*/
+    box-sizing: border-box; /* Para que el padding no incremente el ancho */
+}
+.col-50{
+    flex-basis: 50%;  /*determina el tamaño de una caja*/
+    max-width: 50%; /*Limita la anchura máxima de los elementos de bloque */
+}
+.col-75{
+    flex-basis: 75%;  /*determina el tamaño de una caja*/
+    max-width: 75%; /*Limita la anchura máxima de los elementos de bloque */
+}
+.img-fluid{
+    width: 100% ;/* Así se indica el ancho del objeto sea el de su contenedor*/
+    height: auto;
+}
+.alineacion-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+}
+.menu li a{
+    display: block;/* al ser estilo de bloque considera los padding superior e inferior */
+}
+.menu-top li a{
+    padding: 5px 10px;/* arriba y abajo / izquierda y derecha */
+    color: var(--color-blanco);
+}
+.menu-top li a:hover{
+    color: var(--color-negro);
+    text-decoration: none;
+    background-color: var(--color-blanco);
+}
+.menu-main li a{
+    padding: 30px 15px;/* arriba y abajo / izquierda y derecha */
+    color: var(--color-negro);
+    border-bottom: solid 4px transparent; 
+}
+.menu-main li a:hover{
+    color: var(--color4);
+    text-decoration: none;
+    border-bottom: solid 4px var(--color-negro);      
+}
+.imagen-leyenda{
+    position: relative;/* para que los objetos contenidos con position absolute
+    lo tomen como referencia */
+    top: -60px;
+}
+.imagen-leyenda-contenido{
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;/* para que el objeto quede flotando sobre la página */
+    top: 0;
+    height: calc(100% - 80px);/* 100% igual al de su contenedor (en este caso el alto) */
+    width: calc(100% - 110px);/* calc hace una operación matemática */
+    padding: 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: .5s all ease-in-out;/* duración en segundos, 
+    todas propiedades que han cambiado se animen, efecto */
+    margin: 40px;
+}
+.imagen-leyenda-contenido:hover{
+    opacity: 1;
+}
+.boton-vinculo:hover{
+    text-decoration: none;
+    background-color: var(--color1);
+    color: var(--color-negro);
+    border:none;
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*-------FORMULARIO*****/
+.form-control{
+    width: 100x;
+    padding: 10px
+}
+.espacio-control{
+    margin-bottom: 5px;
+}
+.boton-formulario{
+    width: 200px;
+    padding: 10px;
+    background-color: var(--color4);
+    color: var(--color-negro);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.boton-formulario-hover{
+    background-color: var(--color1);
+    color: whitesmoke;
+}
+.caja-formulario{
+    background-color: var(--color-blanco);
+    padding: 30px;
+    box-shadow: var(--sombra-principal);
+}    
+.area-mapa{
+    padding-bottom: 25%;
+    background-color: var(--sombra-principal);
+}
+
+#sedes{
+    background-color: var(--color-blanco);
+    text-align: center;
+   padding-left: 220px;
+   font-family: 'Times New Roman', Times, serif;
+}
+.tabla-datos{
+    width: 100%;
+    background-color: var(--color-gris-claro);
+    color: #000000;
+    border-collapse: collapse; /* Elimina el espacio por defecto entre celda y celda */
+}
+.tabla-datos thead tr th{
+    background-color: rgba(0,0,0,0.6);
+    color: var(--color-negro);
+    text-align: center;
+    padding: 8px;
+}
+.tabla-datos tbody tr td{
+    /* border-bottom: solid 1px var(--color-gris-oscuro); */
+    border: solid 1px var(--color-negro);
+    padding: 8px;
+}
+.tabla-datos tfoot tr th{
+    text-align: center;
+    padding: 8px;
+}
+.tabla-datos thead tr th:last-child,
+.tabla-datos tfoot tr th:last-child,
+.tabla-datos tbody tr td:last-child{
+    text-align: center;
+}
+
+.tabla-datos tbody tr:nth-child(odd){
+    /*
+    odd es impar e even es par
+    */
+    background-color:rgba(0,0,0,0.1);
+}
+.tabla-datos tbody tr:hover{
+    background-color:rgba(0,0,0,0.2);
+    color: var(--color-blanco);
+}
+.area-iframe{
+    padding-bottom: 150%;
+}
+#mapa{
+    text-align: center;
+    border: var(--color-negro);
+    box-shadow: var(--sombra-principal);
+    font-family: 'Times New Roman', Times, serif;
+}
+.img-flu{
+    width: 70% ;/* Así se indica el ancho del objeto sea el de su contenedor*/
+    height: auto;
+    margin-left: 100px;
+    
+}
